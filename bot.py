@@ -32,7 +32,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = InlineKeyboardMarkup([
         [
             InlineKeyboardButton(
-                "🔥 Спробувати додаток",
+                "Спробувати додаток",
                 web_app=WebAppInfo(url=WEBAPP_URL)
             )
         ]
