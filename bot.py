@@ -7,8 +7,8 @@ logging.basicConfig(level=logging.INFO)
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
-# Посилання на додаток
-WEBAPP_URL = "https://psych-proxy-production.up.railway.app"
+# Посилання на Mini App
+WEBAPP_URL = "https://denyskorobka.github.io/psych-miniapp/"
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -16,19 +16,23 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     text = (
         f"Привіт, {first_name}! 👋\n\n"
-        "Це демо інтерактивного Telegram-додатку, який показує, як може виглядати сучасний бот для бізнесу.\n\n"
-        "Всередині ти зможеш подивитись, як працюють:\n"
-        "• AI-чат\n"
+        "Це демо інтерактивного Telegram-додатку, який показує, "
+        "як можуть виглядати сучасні боти для бізнесу.\n\n"
+
+        "Всередині ти зможеш подивитись:\n"
+        "• AI-чат з помічником\n"
         "• зручний інтерфейс\n"
         "• сценарії взаємодії з клієнтами\n"
-        "• автоматизація заявок і записів\n\n"
-        "Спробуй функціонал у дії та оціни, як подібне рішення може працювати для твого проєкту 👇"
+        "• автоматизацію заявок та записів\n\n"
+
+        "Спробуй функціонал у дії та подивись, "
+        "як подібне рішення може працювати для твого проєкту 👇"
     )
 
     keyboard = InlineKeyboardMarkup([
         [
             InlineKeyboardButton(
-                "Спробувати додаток",
+                "🔥 Спробувати додаток",
                 web_app=WebAppInfo(url=WEBAPP_URL)
             )
         ]
